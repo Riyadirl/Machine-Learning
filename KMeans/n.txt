@@ -1,3 +1,4 @@
+k means 
 
 np.zeros is a NumPy function that creates a new array filled with zeros. The syntax for np.zeros is
 
