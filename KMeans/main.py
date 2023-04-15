@@ -41,3 +41,6 @@ while True:
 
     # Move to next iteration
     centroid_old = centroid_new.copy()
+
+
+print(centroid_old)
