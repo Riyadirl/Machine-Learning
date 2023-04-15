@@ -8,17 +8,26 @@ X = np.loadtxt('jain_feats.txt')
 
 # Load initial centroids from jain_centers.txt into a 2D numpy array centroid_old
 centroid_old = np.loadtxt('jain_centers.txt')
-
-# Initialize centroid_new array with zeros
 centroid_new = np.zeros_like(centroid_old)
 
-# Iterate for 1000 epochs
-for e in range(1000):
+# Initialize label array
+label = np.zeros(X.shape[0])
 
-    # Assign points to centroids/clusters
-    label = np.zeros(X.shape[0], dtype=int)
-    for i, x in enumerate(X):
-        dist = np.linalg.norm(x - centroid_old, axis=1)
+# Define a function to calculate Euclidean distance
+
+
+def distance(x, y):
+    return np.sqrt(np.sum((x-y)**2))
+
+
+# Run k-means algorithm
+max_dif = 1E-7
+while True:
+    # Assign points to centroids
+    for i in range(X.shape[0]):
+        dist = np.zeros(centroid_old.shape[0])
+        for j in range(centroid_old.shape[0]):
+            dist[j] = distance(X[i], centroid_old[j])
         label[i] = np.argmin(dist)
 
     # Update centroids
@@ -27,10 +36,8 @@ for e in range(1000):
 
     # Check stop condition
     diff = np.max(np.abs(centroid_new - centroid_old))
-    if diff < 1E-7:
+    if diff < max_dif:
         break
-    else:
-        centroid_old = centroid_new.copy()
 
-# Final cluster centroids
-print(centroid_old)
+    # Move to next iteration
+    centroid_old = centroid_new.copy()
