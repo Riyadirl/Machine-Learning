@@ -25,5 +25,4 @@ np.argmin is a NumPy function that returns the index of the minimum value in a N
 
 copy module provides functions for creating shallow and deep copies of objects.
 
-
 np.abs is a NumPy function that returns the absolute value of an array or a complex number. The function can be used to get the magnitude of a complex number, which is the distance from the origin in the complex plane.
