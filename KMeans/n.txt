@@ -1,0 +1,27 @@
+
+np.zeros is a NumPy function that creates a new array filled with zeros. The syntax for np.zeros is
+
+shape: the shape of the new array, which can be a tuple of integers or a single integer (in the latter case, the resulting array will have only one dimension).
+dtype (optional): the data type of the elements in the new array. The default value is float.
+order (optional): the memory layout of the new array. The default value is 'C' (row-major order).
+Here's an example of how to use np.zeros to create a 2D array of shape (3, 4):
+
+enumerate() is a built-in function in Python that allows you to loop over an iterable object (such as a list, tuple, or string) and keep track of the index of the current item in the loop. 
+
+shape typically refers to the dimensions or size of an array or matrix. It is often used in the context of the NumPy library, which is a popular library for scientific computing in Python.
+
+In NumPy, an array is a grid of values, all of the same type, and is indexed by a tuple of non-negative integers. The number of dimensions of the array is called its rank, and the size of each dimension is called its shape.
+
+linalg.norm refers to a function from the NumPy library that computes the norm (or magnitude) of a vector or matrix.
+
+To get the shape of a NumPy array, you can use the shape attribute.
+
+"norm" usually refers to a mathematical function that measures the size or magnitude of a vector or a matrix. The most common norms used in Python are:
+
+np.argmin is a NumPy function that returns the index of the minimum value in a NumPy array along a specified axis.
+
+np.argmin is a NumPy function that returns the index of the minimum value in a NumPy array along a specified axis.
+
+copy module provides functions for creating shallow and deep copies of objects.
+
+np.abs is a NumPy function that returns the absolute value of an array or a complex number. The function can be used to get the magnitude of a complex number, which is the distance from the origin in the complex plane.
